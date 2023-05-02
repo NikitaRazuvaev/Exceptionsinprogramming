@@ -13,6 +13,7 @@ public class Task1 {
     public static void main(String[] args) {
         processEnteredDate();
     }
+
     public static float numberFloat() {
         System.out.println("Введите дробное число через запятую:");
         try (Scanner scanNum = new Scanner(System.in)) {
@@ -21,19 +22,19 @@ public class Task1 {
             return num;
         }
     }
+
     /**
      * @return
      */
-    public static float processEnteredDate(){
-        try{
+    public static float processEnteredDate() {
+        try {
             numberFloat();
-        }
-        catch(InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("Неверный ввод!");
             processEnteredDate();
-    
+
         }
         return 0;
     }
-    
+
 }
