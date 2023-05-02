@@ -15,10 +15,11 @@ public class Task1 {
     }
     public static float numberFloat() {
         System.out.println("Введите дробное число через запятую:");
-        Scanner scanNum = new Scanner(System.in);
-        float num = scanNum.nextFloat();
-        System.out.println("Вы ввели:\n" + (num));
-        return num;
+        try (Scanner scanNum = new Scanner(System.in)) {
+            float num = scanNum.nextFloat();
+            System.out.println("Вы ввели:\n" + (num));
+            return num;
+        }
     }
     /**
      * @return
